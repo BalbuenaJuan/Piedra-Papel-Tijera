@@ -1,24 +1,28 @@
 var t; var b; var a; var numero; var m; var r;
 
-function numeroAleatorio(maximo,minimo)
+function numeroAleatorio(minimo,maximo)
 {
 	numero = Math.floor(Math.random() * (maximo - minimo + 1) + minimo );
 	return numero
 }
 
+var piedra = 0;
+var papel = 1;
+var tijera = 2;
+
 function calcular()
 {
 	var opcionMaquina = numeroAleatorio(0,2);
 
-	if(opcionMaquina == 0)
+	if(opcionMaquina == piedra)
 	{
 		m.innerHTML = "<p>La máquina elegió a Piedra</p>";
 	}
-	else if(opcionMaquina == 1)
+	else if(opcionMaquina == papel)
 	{
 		m.innerHTML = "<p>La máquina eligió Papel</p>";
 	}
-	else if(opcionMaquina == 2)
+	else if(opcionMaquina == tijera)
 	{
 		m.innerHTML = "<p>La máquina eligió Tijera</p>";
 	}
@@ -29,14 +33,14 @@ function calcular()
 	if(dato == "tijera")
 	{
 		a.innerHTML = "<p>Elegiste Tijera</p>";
-		if(opcionMaquina == 0)
+		if(opcionMaquina == piedra)
 		{
 			r.innerHTML = "<p>Perdiste :(</p>";
 		}
-		else if(opcionMaquina == 1){
+		else if(opcionMaquina == papel){
 			r.innerHTML = "<p>Ganaste :)</p>";
 		}
-		else if(opcionMaquina == 2)
+		else if(opcionMaquina == tijera)
 		{
 			r.innerHTML = "<p>Empataste!!</p>"
 		}
@@ -44,14 +48,14 @@ function calcular()
 	else if(dato == "piedra")
 	{
 		a.innerHTML = "<p>Elegiste Piedra</p>";
-		if(opcionMaquina == 0)
+		if(opcionMaquina == piedra)
 		{
 			r.innerHTML = "<p>Empataste!!</p>";
 		}
-		else if(opcionMaquina == 1){
+		else if(opcionMaquina == papel){
 			r.innerHTML = "<p>Perdiste :(</p>";
 		}
-		else if(opcionMaquina == 2)
+		else if(opcionMaquina == tijera)
 		{
 			r.innerHTML = "<p>Ganaste :)</p>"
 		}
