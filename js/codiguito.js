@@ -27,10 +27,11 @@ function calcular()
 		m.innerHTML = "<p>La máquina eligió Tijera</p>";
 	}
 
-	var dato = t.value
+	var dato = t.value;
+	dato = dato.toUpperCase();
 	//a.innerHTML = dato;
 
-	if(dato == "tijera")
+	if(dato == "TIJERA")
 	{
 		a.innerHTML = "<p>Elegiste Tijera</p>";
 		if(opcionMaquina == piedra)
@@ -45,7 +46,7 @@ function calcular()
 			r.innerHTML = "<p>Empataste!!</p>"
 		}
 	}
-	else if(dato == "piedra")
+	else if(dato == "PIEDRA")
 	{
 		a.innerHTML = "<p>Elegiste Piedra</p>";
 		if(opcionMaquina == piedra)
@@ -60,7 +61,7 @@ function calcular()
 			r.innerHTML = "<p>Ganaste :)</p>"
 		}
 	}
-	else if(dato == "papel")
+	else if(dato == "PAPEL")
 	{
 		a.innerHTML = "<p>Elegiste Papel</p>"
 		if(opcionMaquina == 0)
