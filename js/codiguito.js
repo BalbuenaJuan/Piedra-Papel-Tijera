@@ -29,7 +29,13 @@ function calcular()
 
 	var dato = t.value;
 	dato = dato.toUpperCase();
-	//a.innerHTML = dato;
+	t.value = "";
+
+	if(dato != "TIJERA" || dato != "PAPEL" || dato != "PIEDRA"){
+		a.innerHTML = "<p>Elegiste mal</p>";
+		r.innerHTML = "<p>Prueba de nuevo</p>";
+		m.innerHTML = "<p>Escoge una opción válida</p>";
+	}
 
 	if(dato == "TIJERA")
 	{
@@ -78,11 +84,13 @@ function calcular()
 	}
 
 
+
+
 }
 
 function inicio()
 {
-	a = document.getElementById("agregar")
+	a = document.getElementById("agregar");
 	t = document.getElementById("text");
 	b = document.getElementById("boton");
 	m = document.getElementById("maquina");
