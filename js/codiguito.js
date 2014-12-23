@@ -14,6 +14,12 @@ function calcular()
 {
 	var opcionMaquina = numeroAleatorio(0,2);
 
+	if(dato != "TIJERA" || dato != "PAPEL" || dato != "PIEDRA"){
+		a.innerHTML = "<p>Elegiste mal</p>";
+		r.innerHTML = "<p>Prueba de nuevo</p>";
+		m.innerHTML = "<p>Escoge una opción válida</p>";
+	}
+
 	if(opcionMaquina == piedra)
 	{
 		m.innerHTML = "<p>La máquina elegió a Piedra</p>";
@@ -30,12 +36,6 @@ function calcular()
 	var dato = t.value;
 	dato = dato.toUpperCase();
 	t.value = "";
-
-	if(dato != "TIJERA" || dato != "PAPEL" || dato != "PIEDRA"){
-		a.innerHTML = "<p>Elegiste mal</p>";
-		r.innerHTML = "<p>Prueba de nuevo</p>";
-		m.innerHTML = "<p>Escoge una opción válida</p>";
-	}
 
 	if(dato == "TIJERA")
 	{
