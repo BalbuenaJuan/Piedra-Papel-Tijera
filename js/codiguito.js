@@ -69,7 +69,7 @@ function calcular()
 	}
 	else if(dato == "PAPEL")
 	{
-		a.innerHTML = "<p>Elegiste Papel</p>"
+		a.innerHTML = "<p>Elegiste Papel</p>";
 		if(opcionMaquina == 0)
 		{
 			r.innerHTML = "<p>Ganaste :)</p>";
