@@ -10,6 +10,8 @@ var piedra = 0;
 var papel = 1;
 var tijera = 2;
 
+
+
 function calcular()
 {
 	var opcionMaquina = numeroAleatorio(0,2);
@@ -97,4 +99,12 @@ function inicio()
 	r = document.getElementById("resultado");
 
 	b.addEventListener("click", calcular);
+
+    t.addEventListener('keyup', secondDisparo);
+
+    function secondDisparo( evt ){
+        if(evt.keyCode == 13){
+            calcular()
+        }
+    }
 }
